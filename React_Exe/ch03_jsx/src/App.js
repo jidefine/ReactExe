@@ -1,6 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
-
+// import './App.css';
+// import Child from './ex06_classname/Child';
+import Child from './ex07_comment/Child';
 function App() {
   return (
     <div className="App">
