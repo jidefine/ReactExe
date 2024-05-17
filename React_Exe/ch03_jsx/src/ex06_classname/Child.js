@@ -1,17 +1,9 @@
 import "./Child.css";
 
 function Child() {
-    const name="리액트";
+  const name = "리액트";
 
-    // js 주석은 이렇게
-
-    return(
-     <>
-        {/*주석은 이렇게 작성합니다.*/}
-        <div className="react">{name}</div>
-        // 이런 주석은 보입니다. /*이것도 보입니다.*/
-     </>
-    );
+  return <div className="react">{name}</div>;
 }
 
 export default Child;
