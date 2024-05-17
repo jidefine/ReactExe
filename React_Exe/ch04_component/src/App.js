@@ -9,7 +9,13 @@ import './App.css';
 // import MyComponent from "./ex07_children/MyComponent";
 // import MyComponent from "./ex08_destructing/MyComponent";
 // import MyComponent from "./ex09_prop_types/MyComponent";
-import MyComponent from "./ex10_prop_required/MyComponent";
+// import MyComponent from "./ex10_prop_required/MyComponent";
+// import MyComponent from "./ex11_prop_class/MyComponent";
+// import MyComponent from "./ex12_prop_class/MyComponent";
+// import Team from './ex13_prop_compose_component/Team';
+// import CommentList from './ex18_comment/CommentList';
+// import CommentList from './ex19_comment/CommentList';
+import CommentList from './ex20_comment/CommentList';
 
 function App() {
   // return <Child />;
@@ -27,7 +33,13 @@ function App() {
 
     // <MyComponent name="행운">리액트 프로그래밍</MyComponent>
 
-    <MyComponent name="행운" favoriteNum={3}>리액트 프로그래밍</MyComponent>
+    // <MyComponent name="행운" favoriteNum={3}>리액트 프로그래밍</MyComponent>
+  
+    //<MyComponent name="행운" favoriteNum={3}>가보자고~</MyComponent>
+
+    // <Team title="가보자고 서비스"></Team>
+
+    <CommentList />
   );
 }
 
