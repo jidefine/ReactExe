@@ -4,15 +4,6 @@ function Avatar(props){
     )
 }
 
-function UserInfo(props){
-    return (
-            <div className="user-info">
-                <Avatar user={props.user}/>
-                <div className="user-info-name">{props.user.name}</div>
-            </div>        
-    )
-}
-
 function Comment(props){
     function formatDate(date){
         <div>날짜: {date}</div>
@@ -20,8 +11,10 @@ function Comment(props){
 
     return(
         <div className="comment">
-
-            <UserInfo user={props.author}/>
+            <div className="user-info">
+                <Avatar user={props.author}/>
+                <div className="user-info-name">{props.author.name}</div>
+            </div>
 
             <div className="comment-text">
                 {props.text}

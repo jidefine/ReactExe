@@ -6,6 +6,7 @@ function CommentList(props){
         <div>
             <Comment/>
         </div>
-        
     )
 }
+
+export default CommentList;

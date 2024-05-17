@@ -25,6 +25,6 @@ MyComponent.defaultProps = {
 MyComponent.propTypes = {
     name: PropTypes.string,
     favoriteNum : PropTypes.number.isRequired,
-}
+};
 
-export default MyComponent;
+export default MyComponent;s
