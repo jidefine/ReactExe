@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 
 class ScrollBox extends Component {
+    // 스크롤 바를 가장 아래로 내리도록 위치
+    scrollToBottom = () => {
+        // scrollTop: 세로 스크롤바 위치
+        // scrollHeight: 스크롤이 있는 박스 안의 div 높이
+        // clientHeight: 스크롤리 있는 박스의 높이
+        const {scrollHeight, clientHeight} = this.box;
+        this.box.scrollTop = scrollHeight - clientHeight;
+    };
+
     render() {
       const style = {
         border: '1px solid black',
@@ -22,6 +31,16 @@ class ScrollBox extends Component {
           ref={(ref) => {this.box=ref}}>
           <div style={innerStyle}/>
         </div>
+        
+        // 2안
+        // <div
+        // style={style}
+        // ref={(ref) => {
+        //   this.box = ref;
+        // }}
+        // >
+        //     <div style={innerStyle} />
+        // </div>
       );
     }
   }
