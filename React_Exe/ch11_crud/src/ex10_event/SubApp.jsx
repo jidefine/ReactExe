@@ -2,7 +2,12 @@
 function Header(props){
   return (
     <header>
-    <h1><a href="/">{props.title}</a></h1>
+    <h1>
+        <a href="/" onClick={function(event){
+        event.preventDefault(); // 원래 <a>태그의 기능을 막음
+        props.onChangeMode();   // onChangeMode에 전달된 함수가 호출
+      }}>{props.title}</a>
+    </h1>
 
   </header>
   )
@@ -45,7 +50,10 @@ export default function SubApp() {
 
   return (
     <div>
-      <Header title='REACT'/>
+      {/* Header의 props로 title과 onChangeMode가 변수로 전달 */}
+      <Header title='REACT' onChangeMode={function() {
+        alert('Header');
+      }}/>
       <Nav topics={topics} />
       <Acticle title='WHAT' body='Hell! 뽀로로!'/>
       <Acticle title='WHY' body='Hell! 포비!'/>
