@@ -1,3 +1,5 @@
+// ClassRooms에서 코드 분리
+
 import { useState } from "react";
 
 function UseCounter(initialValue) {

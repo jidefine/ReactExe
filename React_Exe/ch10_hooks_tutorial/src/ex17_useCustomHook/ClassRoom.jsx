@@ -17,7 +17,7 @@ function ClassRoom(props){
     // count 값이 변경될 때 호출
     useEffect(() => {
         setIsFull(count >= MAX_CAPACITY);
-        console.log(`Current count value : $[count]`);
+        console.log(`Current count value : ${count}`);
     }, [count]);
 
     return (
