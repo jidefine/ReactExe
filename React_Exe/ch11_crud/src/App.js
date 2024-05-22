@@ -15,7 +15,14 @@ import './App.css';
 // import SubApp from './ex13_state/SubApp';
 // import SubApp from './ex14_state/SubApp';
 // import SubApp from './ex15_state_id/SubApp';
-import SubApp from './ex16_create/SubApp';
+// import SubApp from './ex16_create/SubApp';
+// import SubApp from './ex17_create/SubApp';
+// import SubApp from './ex18_create/SubApp';
+// import SubApp from './ex19_create/SubApp';
+// import SubApp from './ex20_create/SubApp';
+// import SubApp from './ex21_create/SubApp';
+// import SubApp from './ex22_create/SubApp';
+import SubApp from './ex23_create/SubApp';
 
 function App() {
   return <SubApp />;
