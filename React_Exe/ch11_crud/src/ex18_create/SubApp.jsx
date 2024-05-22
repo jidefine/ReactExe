@@ -102,7 +102,7 @@ export default function SubApp(){
           }} />
           <Nav topics={topics} onChangeMode={(id)=>{
             setMode('READ');
-            setId(id);
+            setId(id); // nav의 리스트중에 어떤 항목(id)이 선택되었는지 알 수 있음
           }} />
           {content}
           <a href='/create' onClick={event=>{

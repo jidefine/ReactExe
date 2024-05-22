@@ -95,8 +95,8 @@ export default function SubApp(){
     }
     content = <Article title={title} body={body}></Article>
   }else if(mode === 'CREATE'){
-    //
-    //
+    // <Create/>내부에서 submit이벤트가 발생하면
+    // 부모에서 전달한 함수인 onCreate에 title, body를 전달하여 호출한다.
     content = <Create onCreate={(title, body)=>{
 
     }}/>
@@ -109,7 +109,7 @@ export default function SubApp(){
           }} />
           <Nav topics={topics} onChangeMode={(id)=>{
             setMode('READ');
-            setId(id);
+            setId(id); // nav의 리스트중에 어떤 항목(id)이 선택되었는지 알 수 있음
           }} />
           {content}
           <a href='/create' onClick={event=>{

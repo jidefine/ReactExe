@@ -61,7 +61,7 @@ function Create(props){
         const title = event.target.title.value;
         const body = event.target.body.value;
 
-        // 부모 영역
+        // 부모 영역에서 props를 통해 전달한 onCreate 함수를 호출함
         props.onCreate(title, body);
       }}>
         <p><input type='text' name='title' placeholder='title'/></p>
@@ -100,8 +100,8 @@ export default function SubApp(){
     }
     content = <Article title={title} body={body}></Article>
   }else if(mode === 'CREATE'){
-    //
-    // 부모에서
+    // <Create/>내부에서 submit이벤트가 발생하면
+    // 부모에서 전달한 함수인 onCreate에 title, body를 전달하여 호출한다.
     content = <Create onCreate={(title, body)=>{
       alert(`${title}-${body}`);
     }}/>
