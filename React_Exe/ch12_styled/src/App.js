@@ -11,7 +11,27 @@ import LargeButton from './ex05_styled/LargeButton';
 import PrimaryButton from './ex08_styled/PrimaryButton';
 import SecondButton from './ex09_styled/SecondButton';
 // import Blocks from './ex10_styled/Blocks';
-import Blocks from './ex11_styled/Blocks';
+// import Blocks from './ex11_styled/Blocks';
+import Blocks from './ex12_styled/Blocks';
+
+const blockItems = [
+  {
+      label: '1',
+      padding: '1rem',
+      backgroundImage: `url("https://image.newsis.com/2023/07/12/NISI20230712_0001313626_web.jpg")`,
+  },
+  {
+      label: '2',
+      padding: '1rem',
+      backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0CkrU5svQxG748DXNaMlQ-5TFDDebsWxpQXeMYx1WAw&s")`,
+  },
+  {
+      label: '3',
+      padding: '1rem',
+      backgroundImage: `url("https://api.nudge-community.com/attachments/35176")`,
+  },
+];
+
 
 function App() {
   return (
@@ -24,10 +44,11 @@ function App() {
     <PrimaryButton primary>퇴근</PrimaryButton>
     <SecondButton>Happy</SecondButton>
     <SecondButton primary>Hell</SecondButton> */}
-    <Blocks />
+    {/* <Blocks />
     <Blocks column/>
     <Blocks stretch/>
-    <Blocks baseline/>
+    <Blocks baseline/> */}
+    <Blocks items={blockItems}/> {/* items로 전달하면, Blocks.jsx가 items로 받음 */}
     </>
   );
 }
