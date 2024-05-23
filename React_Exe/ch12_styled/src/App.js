@@ -10,18 +10,24 @@ import LargeButton from './ex05_styled/LargeButton';
 // import PrimaryButton from './ex07_styled/PrimaryButton';
 import PrimaryButton from './ex08_styled/PrimaryButton';
 import SecondButton from './ex09_styled/SecondButton';
+// import Blocks from './ex10_styled/Blocks';
+import Blocks from './ex11_styled/Blocks';
 
 function App() {
   return (
     <>
-    <ReactButton>안녕하세요</ReactButton>
+    {/* <ReactButton>안녕하세요</ReactButton>
     <StyledButton>YO~~</StyledButton>
     <SimpleButton>행복합니다</SimpleButton>
     <LargeButton>자유</LargeButton>
     <PrimaryButton>출근</PrimaryButton>
     <PrimaryButton primary>퇴근</PrimaryButton>
     <SecondButton>Happy</SecondButton>
-    <SecondButton primary>Hell</SecondButton>
+    <SecondButton primary>Hell</SecondButton> */}
+    <Blocks />
+    <Blocks column/>
+    <Blocks stretch/>
+    <Blocks baseline/>
     </>
   );
 }
