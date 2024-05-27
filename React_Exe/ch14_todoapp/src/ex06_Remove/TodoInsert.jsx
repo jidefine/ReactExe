@@ -20,12 +20,15 @@ const TodoInsert = ({onInsert}) => {
     );
 
     return (
-        <from className='TodoInsert' onSubmit={onSubmit}>
-            <input placeholder='할 일 입력' />
+        <form className='TodoInsert' onSubmit={onSubmit}>
+            <input placeholder='할 일 입력' 
+                value={value}
+                onChange={onChange}
+            />
             <button type='submit'>
                 <MdAdd />
             </button>
-        </from>
+        </form>
     )
 }
 
