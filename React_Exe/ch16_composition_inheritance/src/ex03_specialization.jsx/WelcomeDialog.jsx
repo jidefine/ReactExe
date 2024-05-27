@@ -1,5 +1,5 @@
 
-import FancyBorder from "./FancyBorder";
+import FancyBorder from "../ex02_containment/FancyBorder";
 /* 
 Containment(포함)
 해당 컴포넌트의 children 속성을 이용해서
