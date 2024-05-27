@@ -14,9 +14,9 @@ function TemperatureInput(props){
     return (
         <fieldset>
             <legend>
-                온도 입력(단위: {scaleNames[props.scale]})
+                온도 입력(단위: {scaleNames[scale]})
             </legend>
-            <input value={props.temperature} onChange={handleChange} />
+            <input value={temperature} onChange={handleChange} />
         </fieldset>
     )
 }

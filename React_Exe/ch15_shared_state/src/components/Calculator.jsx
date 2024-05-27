@@ -3,12 +3,12 @@ import TemperatureInput from "./TemperatureInput";
 
 function Calculator(props) {
 
-    // 
+    // 자식들이 공유하는 상태 변수
     const [temperature, setTemperature] = useState(''); // 온도
     const [scale, setScale] = useState('c');            // 섭씨c 화씨f
 
-    const toCelsius = (fah) => ((fah - 32) * 5) / 9;    // ->
-    const toFahrenheit = (cel) => (cel * 9) / 5 + 32;   // ->
+    const toCelsius = (fah) => ((fah - 32) * 5) / 9;    // 화씨 -> 섭씨
+    const toFahrenheit = (cel) => (cel * 9) / 5 + 32;   // 섭씨 -> 화씨
 
     // temp 온도
     // CONVERT 변환 함수
