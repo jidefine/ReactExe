@@ -8,9 +8,9 @@ import React, { useState, useRef, useCallback } from 'react';
 // import TodoTemplate from './ex05_TodoList/TodoTemplate';
 // import TodoInsert from './ex05_TodoList/TodoInsert'
 // import TodoList from './ex05_TodoList/TodoList';
-import TodoTemplate from './ex06_Remove/TodoTemplate';
-import TodoInsert from './ex06_Remove/TodoInsert'
-import TodoList from './ex06_Remove/TodoList';
+import TodoTemplate from './ex07_Toggle/TodoTemplate';
+import TodoInsert from './ex07_Toggle/TodoInsert'
+import TodoList from './ex07_Toggle/TodoList';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -54,10 +54,22 @@ function App() {
     [todos]
   );
 
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo => 
+          // id가 일치하지 않으면 todo 상태로 유지
+          todo.id === id ? {...todo, checked: !todo.checked} : todo,
+        )
+      );
+    },
+    [todos]
+  );
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onRemove={onRemove}/>
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   );
 };
