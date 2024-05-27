@@ -41,6 +41,7 @@
     }
    
     // 엘리먼트 사이사이에 테두리를 넣어 줌
+    // todolist와 다른 todolist 사이에 실선을 그어줘
     & + & {
       border-top: 1px solid #dee2e6;
     }

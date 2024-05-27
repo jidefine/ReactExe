@@ -13,6 +13,7 @@ const TodoListItem = ({ todo }) => {
     
     return (
         <div className="TodoListItem">
+            {/* cn : div 안에 여러 개의 className을 줄 때 사용 */}
             <div className={cn('checkbox', {checked})}>
                 {/* <MdCheckBoxOutlineBlank /> */}
                 {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
