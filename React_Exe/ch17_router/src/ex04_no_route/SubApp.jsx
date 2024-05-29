@@ -15,7 +15,7 @@ function SubApp(){
                     <li><a href="/topics">Topics</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
-                {/* 각 <Routes>는 </Routes>로 감싸줘야 함 */}
+                {/* 각 <Route/>는 <Routes/>로 감싸줘야 함 */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/topics" element={<Topics />} />
