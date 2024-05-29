@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
-function Topic(contents){
+function Topic({contents}){
     // useParams을 사용하면 현재 컴포넌트가 routing된 변수값을 얻을 수 있음
-    const params = useParams;
+    const params = useParams();
     const topic_id = params.topic_id;
     let selected_topic ={
         title: 'Sorry',
