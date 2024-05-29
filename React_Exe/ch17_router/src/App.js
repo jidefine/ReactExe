@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import SubApp from './ex03_routes/SubApp';
+import SubApp from './ex04_no_route/SubApp';
 
 function App() {
   return <SubApp />
