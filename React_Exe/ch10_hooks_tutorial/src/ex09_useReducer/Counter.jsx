@@ -1,5 +1,13 @@
 import { useReducer } from "react";
 
+// useReducer 
+// - useState보다 더 다양한 컴포넌트 상황에 따라 다양한 상태를 다른 값으로 업데이트하는 Hook
+
+// reducer
+// - 현재 상태, 그리고 업데이트를 위해 필요한 정보를 담은 액션(action) 값을 전달받아 
+//   새로운 상태를 반환하는 함수
+
+
 function reducer(state, action){
     switch(action.type){
         case 'INCREMENT' :
