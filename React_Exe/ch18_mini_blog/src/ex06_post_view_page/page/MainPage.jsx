@@ -27,6 +27,7 @@ function MainPage(props){
     const {} = props;
 
     const navigate = useNavigate();
+    
     return(
         <Wrapper>
             <Container>

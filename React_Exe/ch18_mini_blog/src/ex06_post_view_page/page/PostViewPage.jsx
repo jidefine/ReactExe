@@ -26,7 +26,7 @@ const Container = styled.div`
 
 const PostContainer = styled.div`
     padding: 8px 16px;
-    border; 1px solid gray;
+    border: 1px solid gray;
     border-radius: 8px;
 `;
 
@@ -36,8 +36,9 @@ const TitleText = styled.p`
 `;
 
 const ContentText = styled.p`
-    font-size:16px;
-    font-weight; 500;
+    font-size: 20px;
+    line-height: 32px;
+    white-space: pre-wrap;
 `;
 
 const CommentLabel = styled.p`
@@ -67,15 +68,15 @@ function PostViewPage(props){
                     navigate('/');
                 }} />
                 <PostContainer>
-                    <TitleText></TitleText>
-                    <ContentText></ContentText>
+                    <TitleText>{post.title}</TitleText>
+                    <ContentText>{post.content}</ContentText>
                 </PostContainer>
 
-                <CommentLabel></CommentLabel>
+                <CommentLabel>댓글</CommentLabel>
                 <CommentList comments={post.comments} />
 
                 <TextInput height={40} value={comment} onChagne={(event)=>{
-                    setComment(event.target.value)
+                    setComment(event.target.value);
                 }}/>
                 <Button title='댓글 작성하기' onClick={()=>{
                     navigate('/');
