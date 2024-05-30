@@ -19,7 +19,7 @@ themeContext1과 themeContext2를 이용해서
 
 // theme1을 사용하는
 
-const theme1 = {border: '5px dashed green'};
+const theme1 = {border: '5px dashed green'}; // 변경 -> theme1이 적용된 모든 컴포넌트 변경
 const themeContext1 = createContext(theme1);
 
 const theme2 = {border: '10px solid blue'};
