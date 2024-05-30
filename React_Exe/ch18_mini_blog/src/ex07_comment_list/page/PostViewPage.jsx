@@ -67,11 +67,11 @@ function PostViewPage(props){
                     navigate('/');
                 }} />
                 <PostContainer>
-                    <TitleText></TitleText>
-                    <ContentText></ContentText>
+                    <TitleText>{post.title}</TitleText>
+                    <ContentText>{post.content}</ContentText>
                 </PostContainer>
 
-                <CommentLabel></CommentLabel>
+                <CommentLabel>댓글</CommentLabel>
                 <CommentList comments={post.comments} />
 
                 <TextInput height={40} value={comment} onChagne={(event)=>{

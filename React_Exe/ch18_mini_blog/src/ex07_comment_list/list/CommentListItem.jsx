@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     width: calc(100% - 32px);
-    padding: 16px;
+    padding: 8px 16px;
     display; flex;
     flex-direction: column;
     align-items: flex-start;
@@ -17,13 +17,19 @@ const Wrapper = styled.div`
     }
 `;
 
-const ContentTaxt = styled.p`
-    font-size: 20px;
-    font-space: 
+const ContentText = styled.p`
+    font-size: 16px;
+    white-space: pre-wrap;
 `
 
 function CommentListItem(props) {
-    return null;
+    const { comment } = props;
+
+    return (
+        <Wrapper>
+            <ContentText>{comment.content}</ContentText>
+        </Wrapper>
+    );
 }
 
 export default CommentListItem;
