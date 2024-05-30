@@ -4,13 +4,11 @@ import Left1 from './Left1';
 import Right1 from './Right1';
 
 function MainApp(){
-    const [number, setNumber] = useState(1);
     return (
         <div id='container'>
-            <h1>Root: {number}</h1>
+            <h1>Root</h1>
             <div id="grid">
                 <Left1/>
-                 {/* 함수 전달 */}
                 <Right1/> 
             </div>
         </div>
