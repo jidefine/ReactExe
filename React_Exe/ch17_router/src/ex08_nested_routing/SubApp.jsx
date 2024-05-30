@@ -18,6 +18,8 @@ function SubApp(){
                 </ul>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    {/* 자식 Routed인 <Topics />를 가지는 부모 Route의 path 뒤에 다른 경로가 더 붙는다는 뜻으로 
+                    /*(와일드카드)를 붙여줘서 <Topics /> 내부 에서 또다른 Route가 렌더될 수 있음을 명시 */}
                     <Route path="/topics/*" element={<Topics />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/*" element={'Not Found'} />
