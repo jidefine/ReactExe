@@ -20,6 +20,10 @@ const counterSlice = createSlice({
 });
 
 // 큰 저장소인 store 내에 작은 저장소인 sclice를 포함
+
+// dispatch({type:'counterSlice/up', step:2});를 호출하면 
+// 해당 액션은 Redux store에 전달되고, 
+// Redux store는 설정된 reducer를 사용하여 상태를 업데이트
 const store = configureStore({
     reducer:{
         counter:counterSlice.reducer

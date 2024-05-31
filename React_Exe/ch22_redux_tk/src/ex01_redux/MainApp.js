@@ -11,7 +11,7 @@ function reducer(state, action){ // 이벤트 처리 후 store 저장변수에 �
 }
 
 const initialState = {value : 0}; // 초기값 / 어떤 변수를 store에 저장할 것인가
-const store = createStore(reducer, initialState); // 공유 저장소
+const store = createStore(reducer, initialState); // 공유 저장소(애플리케이션의 상태 저장 및 관리)
 
 function Counter(){
     const dispatch = useDispatch(); // redux store에 저장된 reducer에 이벤트 전달
