@@ -1,5 +1,6 @@
 package org.mind.carddatabase;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.mind.carddatabase.domain.Car;
 import org.mind.carddatabase.domain.Owner;
@@ -13,15 +14,11 @@ import java.util.Arrays;
 
 @Log4j2
 @SpringBootApplication
+@RequiredArgsConstructor
 public class CardDataBaseApplication implements CommandLineRunner {
 
     private final OwnerRepository ownerRepository;
     private final CarRepository carRepository;
-
-    public CardDataBaseApplication(OwnerRepository ownerRepository, CarRepository carRepository) {
-        this.ownerRepository = ownerRepository;
-        this.carRepository = carRepository;
-    }
 
     public static void main(String[] args) {
 

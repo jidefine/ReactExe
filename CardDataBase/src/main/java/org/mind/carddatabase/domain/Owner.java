@@ -1,5 +1,7 @@
 package org.mind.carddatabase.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "cars")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
 
     @Id
@@ -20,6 +23,9 @@ public class Owner {
     private String firstName;
     private String lastName;
 
+//    Car를 조회하면서 다시 연결된 OwnerId를 통해
+//    부모를 조회하는 무한 반복에 빠지므로 cars는 json으로 보내지 않는 걸로
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> cars;
 }
