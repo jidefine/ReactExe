@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 // import MainApp from './ex01_redux/MainApp';
 // import MainApp from './ex02_slice/MainApp';
-import MainApp from './ex03_slice/MainApp';
+// import MainApp from './ex03_slice/MainApp';
+import MainApp from './ex04_divide/MainApp';
 
 function App() {
   return <MainApp/>;
