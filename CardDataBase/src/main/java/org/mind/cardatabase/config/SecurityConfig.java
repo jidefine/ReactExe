@@ -4,11 +4,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -43,17 +45,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService)
                 .passwordEncoder(new BCryptPasswordEncoder());
     }
-//
-//    // 인증 검사하는 객체를 Bean으로 생성
-//    @Bean
-//    public AuthenticationManager authenticationManager() throws Exception{
-//        return authenticationManager();
-//    }
+
+    // 인증 검사하는 객체를 Bean으로 생성
+    @Bean
+    public AuthenticationManager getAuthenticationManager() throws Exception{
+        return authenticationManager();
+    }
 
     // 보안 설정/ 주소 권한 허욜 설정
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        super.configure(http);
+        // csrf 보안은 세션을 활용하는데 Rest서버는 세션을 사용하지 않으로
+        http.csrf().disable()
+                .sessionManagement()
+                //
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+                .authorizeRequests()
+                //
+                .antMatchers(HttpMethod.POST, "/login").permitAll()
+                //
+                .anyRequest().authenticated();
     }
     
 }
