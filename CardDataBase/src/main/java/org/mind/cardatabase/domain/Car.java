@@ -1,4 +1,4 @@
-package org.mind.carddatabase.domain;
+package org.mind.cardatabase.domain;
 
 import lombok.*;
 

@@ -1,11 +1,11 @@
-package org.mind.carddatabase;
+package org.mind.cardatabase;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.mind.carddatabase.domain.Car;
-import org.mind.carddatabase.domain.Owner;
-import org.mind.carddatabase.repository.CarRepository;
-import org.mind.carddatabase.repository.OwnerRepository;
+import org.mind.cardatabase.domain.Car;
+import org.mind.cardatabase.domain.Owner;
+import org.mind.cardatabase.repository.CarRepository;
+import org.mind.cardatabase.repository.OwnerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,14 +15,14 @@ import java.util.Arrays;
 @Log4j2
 @SpringBootApplication
 @RequiredArgsConstructor
-public class CardDataBaseApplication implements CommandLineRunner {
+public class CarDataBaseApplication implements CommandLineRunner {
 
     private final OwnerRepository ownerRepository;
     private final CarRepository carRepository;
 
     public static void main(String[] args) {
 
-        SpringApplication.run(CardDataBaseApplication.class, args);
+        SpringApplication.run(CarDataBaseApplication.class, args);
         log.info("CardDataBaseApplication started......");
     }
 
@@ -41,6 +41,7 @@ public class CardDataBaseApplication implements CommandLineRunner {
         Car car1 = Car.builder()
                 .brand("Ford")
                 .model("Mustang")
+                .color("green")
                 .registerNumber("AAA-111")
                 .year(2024)
                 .price(6400)
@@ -49,6 +50,7 @@ public class CardDataBaseApplication implements CommandLineRunner {
         Car car2 = Car.builder()
                 .brand("Hyndai")
                 .model("Genesis")
+                .color("green")
                 .registerNumber("HHH-111")
                 .year(2024)
                 .price(8500)
@@ -57,6 +59,7 @@ public class CardDataBaseApplication implements CommandLineRunner {
         Car car3 = Car.builder()
                 .brand("KIA")
                 .model("Sorento")
+                .color("green")
                 .registerNumber("KKK-111")
                 .year(2024)
                 .price(7500)

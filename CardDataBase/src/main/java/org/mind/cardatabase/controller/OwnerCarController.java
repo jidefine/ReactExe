@@ -1,10 +1,10 @@
-package org.mind.carddatabase.controller;
+package org.mind.cardatabase.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.mind.carddatabase.domain.Car;
-import org.mind.carddatabase.domain.Owner;
-import org.mind.carddatabase.repository.CarRepository;
-import org.mind.carddatabase.repository.OwnerRepository;
+import org.mind.cardatabase.domain.Car;
+import org.mind.cardatabase.domain.Owner;
+import org.mind.cardatabase.repository.CarRepository;
+import org.mind.cardatabase.repository.OwnerRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
