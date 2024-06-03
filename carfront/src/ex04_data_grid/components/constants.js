@@ -1,0 +1,1 @@
+export const SERVER_URL = "htpp://localhost:12000/api/cars";
