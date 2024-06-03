@@ -7,7 +7,7 @@ function CarList(){
 
     //시작하면 1번  서버에 요청
     useEffect(() => {
-        fetch(SERVER_URL)
+        fetch(SERVER_URL + 'api/cars')
         .then(response => {
             // 헤더를 포함한 전체 정보
             console.log(response);

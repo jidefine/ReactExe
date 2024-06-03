@@ -33,7 +33,7 @@ function CarList(){
                             <td>{car.year}</td>
                             <td>{car.price}</td>
                         </tr>
-                         )
+                        )
                     }
                 </tbody>
             </table>
