@@ -4,8 +4,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.mind.cardatabase.domain.Car;
 import org.mind.cardatabase.domain.Owner;
+import org.mind.cardatabase.domain.User;
 import org.mind.cardatabase.repository.CarRepository;
 import org.mind.cardatabase.repository.OwnerRepository;
+import org.mind.cardatabase.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +21,7 @@ public class CarDataBaseApplication implements CommandLineRunner {
 
     private final OwnerRepository ownerRepository;
     private final CarRepository carRepository;
+    private final UserRepository userRepository;
 
     public static void main(String[] args) {
 
@@ -73,5 +76,19 @@ public class CarDataBaseApplication implements CommandLineRunner {
         for(Car car : carRepository.findAll()){
             log.info(car.toString());
         }
+
+        User user1 = User.builder()
+                .username("user")
+                .password("$2y$10$f0CW5tHxfDG1H9Nv8tha/.8KPIFiAPBCAGTVRouZy..EFFWvmlNBS")
+                .role("USER")
+                .build();
+
+        User user2 = User.builder()
+                .username("admin")
+                .password("$2y$10$ZQ8e0cuCenCAqXj6keZUMOKLdy.8s2b6tYnjfFFqEqr.EWUo3p.za")
+                .role("ADMIN")
+                .build();
+
+        userRepository.save(user1);
     }
 }
