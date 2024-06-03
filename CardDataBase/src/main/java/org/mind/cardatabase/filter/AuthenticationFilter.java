@@ -19,7 +19,7 @@ import java.io.IOException;
 // token이 있는지 > token이 정상인지 > 요청 전달
 @Component
 @RequiredArgsConstructor
-public class AuthentionFilter extends OncePerRequestFilter {
+public class AuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
 
