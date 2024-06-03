@@ -66,23 +66,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // 보안 설정/ 주소 권한 허욜 설정
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        // csrf 보안은 세션을 활용하는데 Rest서버는 세션을 사용하지 않으로 disable
+        // 어떤 요청이든 Security에 의해 검사하지 않고 모두 허용
         http.csrf().disable()
-                // CORS는 설정을 사용한다.
                 .cors().and()
-                .sessionManagement()
-                // Rest 서버는 세션 상태를 유지하지 않으므로 STATELESS
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests()
-                // /login엔드포인트에 대한 POST요청은 접근을 허용함.
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
-                // 다른 요청은 인증 과정을 거쳐야 접근할 수 있다.
-                .anyRequest().authenticated().and()
-                .exceptionHandling()
-                .authenticationEntryPoint(authEntryPoint).and()
-                // /login을 제외한 나머지 모든 요청은 필터를 통과해야 정상 응답을 받을 수 있다.
-                .addFilterBefore(authenticationFilter,
-                        UsernamePasswordAuthenticationFilter.class);
+                .authorizeRequests().anyRequest().permitAll();
+//        // csrf 보안은 세션을 활용하는데 Rest서버는 세션을 사용하지 않으로 disable
+//        http.csrf().disable()
+//                // CORS는 설정을 사용한다.
+//                .cors().and()
+//                .sessionManagement()
+//                // Rest 서버는 세션 상태를 유지하지 않으므로 STATELESS
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+//                .authorizeRequests()
+//                // /login엔드포인트에 대한 POST요청은 접근을 허용함.
+//                .antMatchers(HttpMethod.POST, "/login").permitAll()
+//                // 다른 요청은 인증 과정을 거쳐야 접근할 수 있다.
+//                .anyRequest().authenticated().and()
+//                .exceptionHandling()
+//                .authenticationEntryPoint(authEntryPoint).and()
+//                // /login을 제외한 나머지 모든 요청은 필터를 통과해야 정상 응답을 받을 수 있다.
+//                .addFilterBefore(authenticationFilter,
+//                        UsernamePasswordAuthenticationFilter.class);
     }
 
 //    @Autowired
