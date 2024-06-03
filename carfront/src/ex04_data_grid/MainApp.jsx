@@ -1,5 +1,10 @@
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
 import {AppBar, Toolbar, Typography} from '@mui/material'
 import '../App.css';
+import CarList from './components/CarList';
+
 function MainApp() {
     return (
         <div className="App">
@@ -10,6 +15,7 @@ function MainApp() {
                     </Typography>
                 </Toolbar>
             </AppBar>
+            <CarList />
         </div>
     )
 }

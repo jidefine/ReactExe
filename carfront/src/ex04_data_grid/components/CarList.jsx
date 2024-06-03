@@ -8,19 +8,21 @@ function CarList(){
 
     //시작하면 1번  서버에 요청
     useEffect(() => {
-        fetch(SERVER_URL)
-        .then(response => {
-            // 헤더를 포함한 전체 정보
-            console.log(response);
-            return response.json(); // json만 다음으로 넘겨줌
-        })
-        .then(data => {
-            // json object가 넘어왔으니까 계층대로 원하는 데이터 추출
-            console.log(data);
-            return setCars(data._embedded.cars)
-        })
-        .catch(err => console.error(err));
+        fetch(SERVER_URL + 'api/cars')
+        .then(response => response.json())
+        .then(data => setCars(data._embedded.cars))
+        .catch(err=>console.error(err));
     }, []);
+
+    // DataGrid의 헤더에서 사용할 정보
+    const columns = [
+        // field가 json데이터의 명칭과 같아야 함
+        {field: 'brand', headerName: 'Brand', width: 200},
+        {field: 'model', headerName: 'Model', width: 200},
+        {field: 'color', headerName: 'Color', width: 200},
+        {field: 'year', headerName: 'Year', width: 150},
+        {field: 'price', headerName: 'Price', width: 150},
+    ];
 
     return (
         <div style={{height: 500, width: '100%'}}>
