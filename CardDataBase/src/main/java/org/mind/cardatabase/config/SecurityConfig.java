@@ -70,6 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .cors().and()
                 .authorizeRequests().anyRequest().permitAll();
+
 //        // csrf 보안은 세션을 활용하는데 Rest서버는 세션을 사용하지 않으로 disable
 //        http.csrf().disable()
 //                // CORS는 설정을 사용한다.
