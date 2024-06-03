@@ -61,13 +61,13 @@ import java.util.List;
 //    "price": 3200,
 //    "_links": {
 //        "self": {
-//            "href": "http://localhost:12000/api/cars/11"
+//            "href": "http://localhost:12000/api/cars/6"
 //        },
 //        "car": {
-//            "href": "http://localhost:12000/api/cars/11"
+//            "href": "http://localhost:12000/api/cars/6"
 //        },
 //        "owner": {
-//            "href": "http://localhost:12000/api/cars/11/owner"
+//            "href": "http://localhost:12000/api/cars/6/owner"
 //        }
 //    }
 //}
@@ -76,6 +76,10 @@ import java.util.List;
 //작성 -> http://localhost:12000/api/owner/1 -> 전송
 //7. 추가 요청(GET): http://localhost:12000/api/cars/search
 //8. Car color 색상 조회(GET):  http://localhost:12000/api/cars/search/findByColor?color=white
+//9. 삭제(DELETE) : http://localhost:12000/api/cars/6
+
+
+
 
 // 현재 Repository의 api 주소를 변경할 수 있다.
 // @RepositoryRestResource(path="aaa")
