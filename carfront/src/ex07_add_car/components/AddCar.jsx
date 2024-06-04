@@ -8,20 +8,19 @@ function AddCar(props){
         brand: '',
         model: '',
         color: '',
-        registerNumber: '',
         year: '',
         price: '',
-    })
+    });
 
     // 입력 모달창 열림
     const handleClickOpen = () => {
         setOpen(true);
     };
-    // 
+    // 입력 모달 창 닫힘
     const handleClose = () => {
         setOpen(false);
     }
-
+    // 모달창 내에서 자동차 정보 입력시, 해당 필드 정보 갱신
     const handleChange = (event) => {
         setCar({...car, [event.target.name]: event.target.value});
     }
@@ -29,7 +28,7 @@ function AddCar(props){
     return(
         <div>
             <button onClick={handleClickOpen}>New Car</button>
-            <Dialog open={open} onClick={handleClose}>
+            <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>New Car</DialogTitle>
                 <DialogContent>
                     <Stack spacing={2} mt={1}>
