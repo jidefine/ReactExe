@@ -78,7 +78,12 @@ import java.util.List;
 //8. Car color 색상 조회(GET):  http://localhost:12000/api/cars/search/findByColor?color=white
 //9. 삭제(DELETE) : http://localhost:12000/api/cars/6
 
-
+//RESTful API에서 주로 사용되는 HTTP 메서드
+//1. GET: 서버에서 데이터를 가져오는 데 사용
+//2. POST: 서버에 데이터를 전송하여 새롭게 항목을 생성하는 데 사용
+//3. PUT: 해당 항목의 전체를 업데이트할 때 사용
+//4. PATCH: 해당 항목을 부분적으로 업데이트할 때 사용
+//5. DELETE: 해당 항목을 제거
 
 
 // 현재 Repository의 api 주소를 변경할 수 있다.
