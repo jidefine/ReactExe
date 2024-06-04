@@ -34,12 +34,16 @@ function AddCar(props){
                     <Stack spacing={2} mt={1}>
                         <input placeholder='Brand' name='brand'
                             value={car.brand} onChange={handleChange}/>
+                            <br/>
                         <input placeholder='Model' name='model'
                             value={car.model} onChange={handleChange}/>
+                            <br/>
                         <input placeholder='Color' name='color'
                             value={car.color} onChange={handleChange}/>
+                            <br/>
                         <input placeholder='Year' name='year'
                             value={car.year} onChange={handleChange}/>
+                            <br/>
                         <input placeholder='Price' name='price'
                             value={car.price} onChange={handleChange}/>
                     </Stack>
@@ -48,7 +52,7 @@ function AddCar(props){
                     <button onClick={handleClose}>Cancel</button>
                     <button onClick={handleClose}>Save</button>
                 </DialogActions>
-            </Dialog>
+            </Dialog>s
         </div>
     )
 }
