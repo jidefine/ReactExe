@@ -41,35 +41,36 @@ public class CarDataBaseApplication implements CommandLineRunner {
                 .build();
         ownerRepository.saveAll(Arrays.asList(owner1, owner2));
 
-        Car car1 = Car.builder()
-                .brand("Ford")
-                .model("Mustang")
-                .color("green")
-                .registerNumber("AAA-111")
-                .year(2024)
-                .price(6400)
-                .owner(owner1)
-                .build();
-        Car car2 = Car.builder()
-                .brand("Hyndai")
-                .model("Genesis")
-                .color("green")
-                .registerNumber("HHH-111")
-                .year(2024)
-                .price(8500)
-                .owner(owner2)
-                .build();
-        Car car3 = Car.builder()
-                .brand("KIA")
-                .model("Sorento")
-                .color("green")
-                .registerNumber("KKK-111")
-                .year(2024)
-                .price(7500)
-                .owner(owner2)
-                .build();
-        carRepository.saveAll(Arrays.asList(car1, car2, car3));
-
+        for(int i=0; i<=3; i++) {
+            Car car1 = Car.builder()
+                    .brand("Ford")
+                    .model("Mustang")
+                    .color("green")
+                    .registerNumber("AAA-111")
+                    .year(2024)
+                    .price(6400)
+                    .owner(owner1)
+                    .build();
+            Car car2 = Car.builder()
+                    .brand("Hyndai")
+                    .model("Genesis")
+                    .color("green")
+                    .registerNumber("HHH-111")
+                    .year(2024)
+                    .price(8500)
+                    .owner(owner2)
+                    .build();
+            Car car3 = Car.builder()
+                    .brand("KIA")
+                    .model("Sorento")
+                    .color("green")
+                    .registerNumber("KKK-111")
+                    .year(2024)
+                    .price(7500)
+                    .owner(owner2)
+                    .build();
+            carRepository.saveAll(Arrays.asList(car1, car2, car3));
+        }
         for(Owner owner : ownerRepository.findAll()){
             log.info(owner.toString());
         }
