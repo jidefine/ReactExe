@@ -59,7 +59,7 @@ function CarList(){
                     fetchCars();
                     setOpen(true);
                 }else{
-                    alert('Someting went wrong')
+                    alert('Something went wrong')
                 }
             })
             .catch(err => console.error(err)); 
