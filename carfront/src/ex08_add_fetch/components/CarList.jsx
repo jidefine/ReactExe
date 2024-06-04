@@ -34,7 +34,7 @@ function CarList(){
                     fetchCars();
                     setOpen(true);
                 }else{
-                    alert('Something went wrong')
+                    alert('Something went wrong');
                 }
             })
             .catch(err => console.error(err)); 
@@ -46,7 +46,7 @@ function CarList(){
         fetch(SERVER_URL + 'api/cars',
             {
                 method: 'POST',
-                headers: {'Content-Type': 'appilcation/json'},
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(car)
             }
         )
@@ -55,10 +55,10 @@ function CarList(){
                 // 등록 성공하면 서버로부터 목록 재요청
                 fetchCars();
             }else{
-                alert('Something went wrong')
+                alert('Something went wrong');
             }
         })
-        .catch(err => console.error(err))
+        .catch(err => console.error(err));
     }
 
     // DataGrid의 헤더에서 사용할 정보
