@@ -14,8 +14,33 @@ function CarList(){
     // 서버에 car 목록 요청 함수
     const fetchCars = () => {
         fetch(SERVER_URL + 'api/cars')
+        // response는 헤더 + json을 가진 js 객체
+        // response.json()는 json만 가진 js 객체
         .then(response => response.json())
+        // data = response.json()(return 값)
         .then(data => setCars(data._embedded.cars))
+        // {
+        //     "_embedded": {
+        //         "cars": [
+        //             {
+        //                 "brand": "Ford",
+        //                 "model": "Mustang",
+        //                 "color": "green",
+        //                 "registerNumber": "AAA-111",
+        //                 "year": 2024,
+        //                 "price": 6400,
+        //                 "_links": {
+        //                     "self": {
+        //                         "href": "http://localhost:12000/api/cars/3"
+        //                     },
+        //                     "car": {
+        //                         "href": "http://localhost:12000/api/cars/3"
+        //                     },
+        //                     "owner": {
+        //                         "href": "http://localhost:12000/api/cars/3/owner"
+        //                     }
+        //                 }
+        //             },
         .catch(err=>console.error(err));
     };
 
@@ -52,7 +77,12 @@ function CarList(){
             <DataGrid
                 rows={cars}
                 columns={columns}
+                disableRowSelectionOnClick={true}
                 getRowId={row => row._links.self.href}
+                // "_links": {
+                //     "self": {
+                //         "href": "http://localhost:12000/api/cars"
+                //     },
             />
         </div>
     )
