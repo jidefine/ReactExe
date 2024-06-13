@@ -37,6 +37,7 @@ function EditCar(props){
     // 자동차를 저장하고 모달 폼을 닫음
     const handleSave = () => {
         console.log(data);
+        
         updateCar(car, data.id);
         handleClose();
     }
