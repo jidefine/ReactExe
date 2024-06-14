@@ -14,7 +14,7 @@ function EditCar(props){
         price: ''
     });
 
-    // 입력 모달창 열림
+    // 입력 모달창 열림 
     const handleClickOpen = () => {
         setCar({
             brand: data.row.brand,  
