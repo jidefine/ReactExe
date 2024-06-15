@@ -18,7 +18,7 @@ function Login(){
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(user)
-        })
+        }) 
         .then(response => {
             const jwtToken = response.headers.get('Authorization');
             if(jwtToken !== null){
