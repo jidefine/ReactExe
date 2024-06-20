@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import {Button, TextField, Stack, IconButton} from '@mui/material';
-import {EditIcon} from '@mui/icons-material';
+import EditIcon from '@mui/icons-material/Edit';
 
 function EditCar(props){
     const {data, updateCar} = props;

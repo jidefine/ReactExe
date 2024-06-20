@@ -69,7 +69,7 @@ function AddCar(props){
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={handleSave}>Cancel</Button>
+                    <Button onClick={handleSave}>Save</Button>
                     {/* <button onClick={handleClose}>Cancel</button>
                     <button onClick={handleSave}>Save</button> */}
                 </DialogActions>
