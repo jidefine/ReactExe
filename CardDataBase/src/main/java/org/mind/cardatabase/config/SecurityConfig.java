@@ -67,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return authenticationManager();
     }
 
-    // 보안 설정/ 주소 권한 허욜 설정
+    // 보안 설정/ 주소 권한 허용 설정
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         // 어떤 요청이든 Security에 의해 검사하지 않고 모두 허용
@@ -93,11 +93,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .addFilterBefore(authenticationFilter,
 //                        UsernamePasswordAuthenticationFilter.class);
     }
-
-//    @Autowired
-//    public void setAuthenticationFilter(AuthenticationFilter authenticationFilter) {
-//        this.authenticationFilter = authenticationFilter;
-//    }
 
     // CORS 자세한 설정 부분
     @Bean

@@ -40,9 +40,9 @@ function AddCar(props){
                 <DialogTitle>New Car</DialogTitle>
                 <DialogContent>
                     <Stack spacing={2} mt={1}>
-                        <TextField label="Brand" name='brand' autoFocus
+                        <TextField label="Brand" name="brand" autoFocus
                             variant='standard' value={car.brand} onChange={handleChange}/>
-                        <TextField label='Model' name='model'
+                        <TextField label="Model" name="model"
                             variant='standard' value={car.model} onChange={handleChange}/>
                         <TextField label='Color' name='color'
                             variant='standard' value={car.color} onChange={handleChange}/>
@@ -70,8 +70,8 @@ function AddCar(props){
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
                     <Button onClick={handleSave}>Save</Button>
-                    {/* <button onClick={handleClose}>Cancel</button>
-                    <button onClick={handleSave}>Save</button> */}
+                    {/* <button onClick={handleClose}>Cancel</button> */}
+                    {/* <button onClick={handleSave}>Save</button> */}
                 </DialogActions>
             </Dialog>
         </div>
