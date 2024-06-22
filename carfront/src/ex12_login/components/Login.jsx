@@ -35,7 +35,7 @@ function Login(){
 
     return (
         <div>
-            {/* UI 요소를 수직으로 쌓기 위한  Stack 컴포넌트 */}
+            {/* UI요소를 수직으로 쌓기 위한  Stack 컴포넌트 */}
             <Stack spacing={2} alignItems='center' mt={2}>
                 <TextField name='username' label='Username' onChange={handleChange} />
                 <TextField type='password' name='password' label='Password' onChange={handleChange} />
