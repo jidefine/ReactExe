@@ -5,7 +5,7 @@
 // 화면마다 필요한 부분만 구현해서 화면에 출력
 
 // Suspense 컴포넌트: React의 비동기 로딩 지원
-// Suspense, lazy를 통한 지연로딩: 필요할 때만 컴포넌트를 메모리상에 올림
+// Suspense, lazy를 통한 지연로딩(코드 분할, 분할 로딩): 필요할 때만 컴포넌트를 메모리상에 올림
 
 //root.js는 createBrowserRouter를 통해 어떤 경로에 어떤 컴포넌트를 보여줄 것인지 결정
 //import { createBrowserRouter } from "react-router-dom";
