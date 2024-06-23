@@ -1,3 +1,4 @@
+import BasicLayout from "../layouts/BasicLayout";
 // Link를 통해 각 페이지 역할을 하는 컴포넌트가
 // 다른 페이지의 컴포넌트로 이동할 수 있도록 해야 함
 
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const MainPage = () => {
     return (
-        <div>
+        <BasicLayout>
             {/* MainPage 컴포넌트에서 '/about' 경로로 이동할 수 있는 링크 */}
             <div className="flex">
                 <Link to={'/about'}>About</Link>
@@ -15,7 +16,7 @@ const MainPage = () => {
             <div className="text-3xl">
                 <div>MainPage</div>
             </div>
-        </div>
+        </BasicLayout>
     );
 }
 
