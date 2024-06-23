@@ -24,6 +24,7 @@ const BasicMenu = () => {
                     <li className="pr-6 text-2xl">
                         <Link to={'/meeting/'}>모임</Link>
                     </li>
+                    {/*'/todo/'는 모듈의 이름 자체를 하나의 경로로 설정*/}
                     <li className="pr-6 text-2xl">
                         <Link to={'/todo/'}>Todo</Link>
                     </li>

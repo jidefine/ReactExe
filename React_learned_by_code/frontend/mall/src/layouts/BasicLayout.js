@@ -26,7 +26,7 @@ const BasicLayout = ({children}) => {
                     Sidebar
                 </h1>
             </aside>
-            <main className="bg-sky-300 md:w-4/5 lg:w-3/4 px-5 py-40">
+            <main className="md:w-4/5 lg:w-3/4 px-1 py-1">
                 {children}
             </main>
         </div>
