@@ -19,7 +19,8 @@ const BasicLayout = ({children}) => {
         {/*헤더 교체*/}
         <BasicMenu />
 
-        <div className="bg-white my-1 w-full flex flex-col space-y-4 md:flex-row md:space-a-4 md:space-y-0">
+        {/* 상단 여백 my-5 제거 */}
+        <div className="bg-white my-1 w-full flex flex-col space-y-1 md:flex-row md:space-x-1 md:space-y-0">
             <aside className="bg-green-300 md:w-1/5 lg:w-1/4 px-5 py-40">
                 <h1 className="text-2xl md:text-4xl">
                     Sidebar
