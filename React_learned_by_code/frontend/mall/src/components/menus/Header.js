@@ -4,25 +4,20 @@ import '../../assets/styles/common.scss';
 
 const Header = () => {
     return (
-        <header id='navbar' className="flex bg-blue-300">
-            <div className="w-4/5 bg-gray-500">
-                <ul className="flex p-3 text-white font-bold">
-                    <li className="pr-6 text-2xl">
-                        {/*로고 삽입*/}
-                        <Link to={'/'}>
-                            <img src={logoImage} alt="Main" className="h-8" />
-                        </Link>
-                    </li>
-                    <li className="pr-6 text-2xl">
-                        <Link to={'/'}>우리는 함께 산다</Link>
-                    </li>
-                </ul>
-            </div>
-
-            <div className="w-1/5 justify-end bg-orange-300 p-4 font-medium">
-                <div className="text-white text-sm m-1 rounded" >
-                    Login
+        <header className="header">
+            <div className="logo">
+                <div className="logoImage">
+                    <Link to={'/'}><img src={logoImage} alt="Logo" /></Link>
                 </div>
+                <div className="logoTitle">
+                        <Link to={'/'}>우리는 함께 산다</Link>
+                </div>
+            </div>
+            <div className="login">
+                <div> | </div>
+                <Link to={'/login'} className="loginButton poppins-semibold" >
+                    로그인
+                </Link>
             </div>
         </header>
     )
