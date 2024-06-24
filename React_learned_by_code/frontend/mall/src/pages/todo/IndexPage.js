@@ -5,13 +5,13 @@
 
 import { Outlet } from "react-router-dom";
 import BasicLayout from "../../layouts/BasicLayout";
-import SideMenu from "../../components/menus/Sidebar";
+import Sidebar from "../../components/menus/Sidebar";
 
 const IndexPage = () => {
 
     return (
         <BasicLayout>
-            <SideMenu />
+            <Sidebar pageType="todo" />
             <div className="w-full flex m-2 p-2 ">
                 <div className="text-xl m-1 p-2  w-20 font-extrabold text-center underline">
                     LIST
