@@ -1,5 +1,4 @@
 import {Link} from "react-router-dom";
-import logoImage from "../../image/logo.svg"; // 이미지 파일 경로
 
 const BasicMenu = () => {
     return (
