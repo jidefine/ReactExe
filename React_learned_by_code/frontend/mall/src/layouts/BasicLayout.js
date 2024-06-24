@@ -1,5 +1,5 @@
-import BasicMenu from "../components/menus/BasicMenu";
-import SideMenu from "../components/menus/SideMenu";
+import Header from "../components/menus/Header";
+import Nav from "../components/menus/Nav"
 
 // BasicLayout 컴포넌트
 // - 화면 상단에 공통적인 메뉴와 링크를 보여줌
@@ -18,7 +18,8 @@ const BasicLayout = ({children}) => {
         */}
 
         {/*헤더 교체*/}
-        <BasicMenu />
+        <Header />
+        <Nav />
 
         {/* 상단 여백 my-5 제거 */}
         <div className="bg-white my-1 w-full flex flex-col space-y-1 md:flex-row md:space-x-1 md:space-y-0">
@@ -28,10 +29,12 @@ const BasicLayout = ({children}) => {
                 </h1>
             </aside>*/}
             
-            <SideMenu />
-            <main className="bg-sky-300 md:w-4/5 lg:w-3/4 px-1 py-1">
+             {/*<SideMenu />
+            <main className="bg-white-300 md:w-4/5 lg:w-3/4 px-1 py-1">
                 {children}
-            </main>
+            </main>*/}
+            
+            {children}
         </div>
         </>
     );

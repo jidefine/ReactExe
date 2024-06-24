@@ -15,8 +15,9 @@ const {createBrowserRouter} = require("react-router-dom");
 
 const Loading = <div>Loading....</div>
 const Main = lazy(() => import("../pages/MainPage"))
-const About = lazy(() => import("../pages/AboutPage"))
+//const About = lazy(() => import("../pages/AboutPage"))
 
+const TipIndex = lazy(() => import("../pages/tip/IndexPage"))
 const TodoIndex = lazy(() => import("../pages/todo/IndexPage"))
 
 const root = createBrowserRouter([
@@ -24,9 +25,13 @@ const root = createBrowserRouter([
         path: "", // 빈 문자열 ""은 기본 경로를 의미
         element: <Suspense fallback={Loading}><Main/></Suspense>
     },
+    // {
+    //     path: "about", // 빈 문자열 ""은 기본 경로를 의미
+    //     element: <Suspense fallback={Loading}><About/></Suspense>
+    // },
     {
-        path: "about", // 빈 문자열 ""은 기본 경로를 의미
-        element: <Suspense fallback={Loading}><About/></Suspense>
+        path: "tip", // 빈 문자열 ""은 기본 경로를 의미
+        element: <Suspense fallback={Loading}><TipIndex/></Suspense>
     },
     {
         path: "todo", // 빈 문자열 ""은 기본 경로를 의미
