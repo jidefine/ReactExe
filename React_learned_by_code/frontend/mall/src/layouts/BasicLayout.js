@@ -17,8 +17,7 @@ const BasicLayout = ({children}) => {
             </h1>
         </header>
         */}
-
-        {/*헤더 교체*/}
+        
         <Header />
         <Nav />
 
