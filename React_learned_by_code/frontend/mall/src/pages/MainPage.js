@@ -14,7 +14,7 @@ const MainPage = () => {
                 <Link to={'/about'}>About</Link>
             </div>
             <div className="text-3xl">
-                <div>MainPage</div>
+                <div>Page</div>
             </div>
         </BasicLayout>
     );
